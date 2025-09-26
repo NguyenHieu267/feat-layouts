@@ -1,0 +1,469 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Centra No2 TRIAL;
+}
+
+.header {
+  display: flex;
+  width: 1440px;
+  height: 74px;
+  justify-content: space-between;
+  opacity: 1;
+  background: #ffffff;
+  border-bottom: 1px solid #ebecec;
+  position: sticky;
+  top: 0; /* pt với web = 0*/
+}
+.ACW3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 24px;
+}
+.ACW3 span {
+  width: 60px;
+  height: 58px;
+  opacity: 1;
+  font-family: Satoshi;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2rem;
+  line-height: 57.6px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #00706e;
+}
+.frame {
+  width: 126px;
+  height: 74px;
+  margin-right: 24px;
+}
+.button {
+  width: 126px;
+  height: 38px;
+  border-radius: 100px;
+  opacity: 1;
+  padding-top: 7px;
+  padding-right: 32px;
+  padding-bottom: 7px;
+  padding-left: 32px;
+  gap: 33px;
+  border-bottom-width: 1px;
+  background: #009e99;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-right: 24px;
+}
+span {
+  width: 62px;
+  height: 24px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.6rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.content-spacer {
+  width: 1440px;
+  height: 2000px;
+  background: #ffffff;
+}
+
+.footer {
+  display: flex;
+  width: 1440px;
+  height: 60px;
+  justify-content: space-between;
+  opacity: 1;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border-top-width: 1px;
+  background: #ffffff;
+  border-bottom: 1px solid #ebecec;
+  border-top: 1px solid var(--SIG-Grey2, #ebecec);
+}
+.text {
+  display: flex;
+  width: 197px;
+  height: 44px;
+  opacity: 1;
+  gap: 24px;
+}
+.text-left {
+  width: 102px;
+  height: 44px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 8px;
+}
+.text-left span {
+  width: 102px;
+  height: 20px;
+  color: #787575;
+  font-family: Satoshi;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+.text-right {
+  width: 71px;
+  height: 44px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 8px;
+}
+.text-right span {
+  width: 71px;
+  height: 20px;
+  color: #787575;
+  font-family: Satoshi;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+.Social {
+  width: 164px;
+  height: 44px;
+  opacity: 1;
+  gap: 16px;
+}
+.Social img {
+  width: 44px;
+  height: 44px;
+}
+
+.Left-menu {
+  display: flex;
+  width: 1465px;
+  height: 831px;
+  opacity: 1;
+  border-radius: 5px;
+  border-width: 1px;
+}
+.Dashboard-Default {
+  width: 208px;
+  height: 708px;
+  top: 20px;
+  left: 28px;
+  border-right-width: 1px;
+  opacity: 1;
+  background: #ffffff;
+}
+.logo {
+  width: 208px;
+  height: 60px;
+  border-bottom-width: 1px;
+  opacity: 1;
+  border-bottom: 1px solid var(--SIG-Grey2, #ebecec);
+}
+.logo span {
+  width: 60px;
+  height: 58px;
+  left: 74px;
+  opacity: 1;
+  font-family: Satoshi;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 57.6px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #00706e;
+  margin-left: 74px;
+  margin-right: 74px;
+  margin-bottom: 2px;
+}
+.background {
+  margin-top: 10px;
+}
+.Menu {
+  display: flex;
+  width: 176px;
+  height: 40px;
+  gap: 8px;
+  opacity: 1;
+  border-radius: 100px;
+  padding-top: 6px;
+  padding-right: 16px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  align-items: center;
+}
+.Menu img + .text1,
+.Menu img + .text2,
+.Menu img + .text3 {
+  display: flex;
+  align-items: center;
+}
+/* Lia chuột màu xanh*/
+.Menu:hover {
+  background: #009e99;
+}
+/* Lia chuột chữ trắng*/
+.Menu:hover .text1 span,
+.Menu:hover .text2 span,
+.Menu:hover .text3 span {
+  color: #ffffff;
+}
+/* Icon trắng khi hover Menu */
+.Menu:hover img {
+  filter: brightness(0) invert(1);
+}
+.Left-menu img {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
+}
+.text1 {
+  width: 74px;
+  height: 28px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.Menu .text1 span {
+  width: 74px;
+  height: 16px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 1.4rem;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  color: #000000;
+}
+.text2 {
+  width: 38px;
+  height: 28px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.Menu .text2 span {
+  width: 38px;
+  height: 16px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 1.4rem;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  color: #000000;
+}
+.text3 {
+  width: 27px;
+  height: 28px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.Menu .text3 span {
+  width: 38px;
+  height: 16px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 1.4rem;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  color: #000000;
+}
+.frame-bottom {
+  width: 208px;
+  height: 64px;
+  margin-top: 484px;
+}
+img {
+  width: 20px;
+  height: 20px;
+}
+.frame-bottom .text4 {
+  width: 65px;
+  height: 20px;
+  padding-top: 8px;
+}
+.frame-bottom .text4 span {
+  font-family: Satoshi;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.4rem;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  width: 65px;
+  height: 20px;
+  opacity: 1;
+  color: #0d0d0d;
+}
+
+.frame-bottom .text5 {
+  width: 59px;
+  height: 20px;
+  padding-top: 8px;
+}
+.frame-bottom .text5 span {
+  font-family: Satoshi;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #0d0d0d;
+}
+/* Tắt hover nền cho social; vẫn giữ con trỏ */
+.frame-bottom .Menu {
+  background: transparent;
+}
+.frame-bottom .Menu:hover {
+  background: transparent;
+}
+.frame-bottom .Menu img {
+  cursor: pointer;
+}
+.frame-bottom .Menu .text4 span,
+.frame-bottom .Menu .text5 span {
+  cursor: pointer;
+}
+/* Không làm mất icon khi hover social */
+.frame-bottom .Menu:hover img {
+  filter: none;
+}
+.frame-bottom .Menu:hover .text4 span,
+.frame-bottom .Menu:hover .text5 span {
+  color: #0d0d0d;
+}
+
+/* ======================DD1====================== */
+.frame-top1 .Menu1 {
+  display: flex;
+  margin-top: 16px;
+  background: #009e99;
+  width: 176px;
+  height: 40px;
+  gap: 8px;
+  opacity: 1;
+  border-radius: 100px;
+  padding-left: 16px;
+}
+.frame-top1 .Menu1 img {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+.frame-top1 .Menu1 .text1 span {
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+/* ======================DD2====================== */
+.list {
+  width: 149px;
+  height: 60px;
+  border-left-width: 1px;
+  opacity: 1;
+  margin-left: 43px;
+  border-left: 1px solid #aba8a1;
+}
+.link {
+  width: 122px;
+  height: 28px;
+  opacity: 1;
+  border-radius: 100px;
+  background: #009e99;
+  margin-left: 10px;
+  padding-top: 5.75px;
+  padding-bottom: 6.25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link span {
+  width: 92px;
+  height: 16px;
+  top: 5.75px;
+  left: 10px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 1.4rem;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  accent-color: #ffffff;
+  margin-left: 10px;
+}
+.item {
+  padding-top: 9.75px;
+}
+.item span {
+  width: 122px;
+  height: 28px;
+  opacity: 1;
+  border-radius: 6px;
+  width: 63px;
+  height: 16px;
+  top: 5.75px;
+  left: 10px;
+  opacity: 1;
+  font-family: Centra No2 TRIAL;
+  font-weight: 400;
+  font-style: Book;
+  font-size: 1.4rem;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  color: #000000;
+  margin-left: 20px;
+}
+.list .item:hover {
+  background: #009e99;
+  border-radius: 100px;
+}
+.list .item:hover span {
+  color: #ffffff;
+}
+.list .link:hover {
+  filter: brightness(0.95);
+}
+.item:hover span {
+  color: #009e99;
+}
+.Dashboard-Default2 .frame-bottom {
+  margin-top: 424px;
+}
