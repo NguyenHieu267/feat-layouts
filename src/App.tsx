@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import LeftMenu from "./components/left-menu";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -28,10 +28,18 @@ const App = () => {
         <LeftMenu
           variant={menuMode === "default" ? "default" : "with-submenu"}
           activeMenuItem={menuMode === "default" ? "dashboard" : undefined}
-          activeGroup={menuMode === "token" ? "token" : menuMode === "nft" ? "nft" : undefined}
+          activeGroup={
+            menuMode === "token"
+              ? "token"
+              : menuMode === "nft"
+              ? "nft"
+              : undefined
+          }
           onMenuClick={(menuId) => {
-            if (menuId === "token") setMenuMode((m) => (m === "token" ? "default" : "token"));
-            else if (menuId === "nft") setMenuMode((m) => (m === "nft" ? "default" : "nft"));
+            if (menuId === "token")
+              setMenuMode((m) => (m === "token" ? "default" : "token"));
+            else if (menuId === "nft")
+              setMenuMode((m) => (m === "nft" ? "default" : "nft"));
             else setMenuMode("default");
           }}
         />

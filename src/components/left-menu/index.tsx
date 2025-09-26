@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HomeIcon from "../../assets/img/Home.svg";
 import GroupIcon from "../../assets/img/Group.svg";
 import TokenIcon from "../../assets/img/Token.svg";
@@ -117,7 +117,10 @@ const LeftMenu: React.FC<LeftMenuProps> = ({
       onMenuClick(menuId);
     }
 
-    if (variant === "with-submenu" && (menuId === "token" || menuId === "nft")) {
+    if (
+      variant === "with-submenu" &&
+      (menuId === "token" || menuId === "nft")
+    ) {
       setExpandedMenu(menuId);
       return;
     }
@@ -156,12 +159,6 @@ const LeftMenu: React.FC<LeftMenuProps> = ({
     return variant === "active" ? "frame-top1" : "frame-top";
   };
 
-  const handleNFTClick = () => {
-    if (variant === "with-submenu") {
-      setExpandedMenu(expandedMenu === "nft" ? null : "nft");
-    }
-  };
-
   return (
     <div className="Left-menu">
       <div className={getDashboardClass()}>
@@ -177,8 +174,7 @@ const LeftMenu: React.FC<LeftMenuProps> = ({
                   className={
                     (variant === "active" && activeMenuItem === item.id
                       ? "Menu1"
-                      : "Menu") +
-                    (activeGroup === item.id ? " active" : "")
+                      : "Menu") + (activeGroup === item.id ? " active" : "")
                   }
                   onClick={() => handleMenuClick(item.id)}
                   style={{ cursor: "pointer" }}
@@ -189,47 +185,59 @@ const LeftMenu: React.FC<LeftMenuProps> = ({
                   </div>
                 </div>
 
-                {item.id === "token" && variant === "with-submenu" && activeGroup === "token" && (
-                  <div className="Token">
-                    <div className="list">
-                      <div
-                        className={activeSubItem === "token-creator" ? "link" : "item"}
-                        onClick={() => handleSubMenuClick("token-creator")}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span>Token Creator</span>
-                      </div>
-                      <div
-                        className={activeSubItem === "token-list" ? "link" : "item"}
-                        onClick={() => handleSubMenuClick("token-list")}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span>Token List</span>
+                {item.id === "token" &&
+                  variant === "with-submenu" &&
+                  activeGroup === "token" && (
+                    <div className="Token">
+                      <div className="list">
+                        <div
+                          className={
+                            activeSubItem === "token-creator" ? "link" : "item"
+                          }
+                          onClick={() => handleSubMenuClick("token-creator")}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span>Token Creator</span>
+                        </div>
+                        <div
+                          className={
+                            activeSubItem === "token-list" ? "link" : "item"
+                          }
+                          onClick={() => handleSubMenuClick("token-list")}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span>Token List</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {item.id === "nft" && variant === "with-submenu" && activeGroup === "nft" && (
-                  <div className="Token">
-                    <div className="list">
-                      <div
-                        className={activeSubItem === "nft-collection" ? "link" : "item"}
-                        onClick={() => handleSubMenuClick("nft-collection")}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span>NFT Collection</span>
-                      </div>
-                      <div
-                        className={activeSubItem === "nft-list" ? "link" : "item"}
-                        onClick={() => handleSubMenuClick("nft-list")}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span>NFT List</span>
+                {item.id === "nft" &&
+                  variant === "with-submenu" &&
+                  activeGroup === "nft" && (
+                    <div className="Token">
+                      <div className="list">
+                        <div
+                          className={
+                            activeSubItem === "nft-collection" ? "link" : "item"
+                          }
+                          onClick={() => handleSubMenuClick("nft-collection")}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span>NFT Collection</span>
+                        </div>
+                        <div
+                          className={
+                            activeSubItem === "nft-list" ? "link" : "item"
+                          }
+                          onClick={() => handleSubMenuClick("nft-list")}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <span>NFT List</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
             ))}
           </div>
